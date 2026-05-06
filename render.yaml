@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: redmine-mcp-server
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: REDMINE_URL
+        value: https://quynhly.planio.com
+      - key: REDMINE_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: SERVER_HOST
+        value: 0.0.0.0
+      - key: SERVER_PORT
+        value: 8000
+    healthCheckPath: /health
