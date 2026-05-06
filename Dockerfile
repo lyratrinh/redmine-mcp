@@ -12,4 +12,4 @@ ENV REDMINE_URL=https://quynhly.planio.com
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_PORT=8000
 
-CMD ["redmine-mcp-server"]
+CMD ["redmine-mcp-server", "--no-auth"]
